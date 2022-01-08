@@ -8,27 +8,27 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the name of your project?'
+        message: 'What is the name of your app?'
     },
     {
         type: 'input',
         name: 'description',
-        message: 'What is your project about?'
+        message: 'Description of the app: '
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Installation Instructions: '
+        message: 'Installation instructions: '
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Usage Information: '
+        message: 'How to use the app: '
     },
     {
         type: 'input',
         name: 'contribution',
-        message: 'What are the contribution guidelines? '
+        message: 'How to make contributions: '
     },
     {
         type: 'input',
