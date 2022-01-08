@@ -17,11 +17,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'tableOfContents',
-        message: 'Table of Contents: '
-    },
-    {
-        type: 'input',
         name: 'installation',
         message: 'Installation Instructions: '
     },
@@ -32,13 +27,23 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'contribution',
         message: 'What are the contribution guidelines? '
     },
     {
         type: 'input',
         name: 'tests',
         message: 'What are the test instructions? '
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github user name?'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
     },
     {
         type: 'list',
@@ -49,13 +54,7 @@ const questions = [
             'Apache',
             'GPL'
         ]
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your github user name?'
-    },
-    
+    }
 ];
 
 // TODO: Create a function to write README file
