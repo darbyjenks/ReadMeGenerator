@@ -10,6 +10,15 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  if (license === 'Apache'){
+    return 'https://opensource.org/licenses/Apache-2.0'
+  }
+  if (license === 'MIT'){
+    return 'https://opensource.org/licenses/MIT'
+  }
+  if (license === 'GPL'){
+    return 'https://opensource.org/licenses/GPL-3.0'
+  }
 }
 
 // TODO: Create a function that returns the license section of README
@@ -82,6 +91,7 @@ function generateMarkdown(data) {
        *Github: https://github.com/${data.github}
        *Email: ${data.email}
   ${renderLicenseBadge(data.license)}
+  ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license, data.github)}
 `;
 }
