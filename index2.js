@@ -1,5 +1,7 @@
 // GIVEN a command-line application that accepts user input
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown')
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 inquirer
@@ -52,13 +54,8 @@ inquirer
 },
 ])
 .then(data => {
-    console.log(data)
-    // THEN this is displayed as the title of the README
-    // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-    // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-    // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-    // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+    console.log(data);
+    fs.writeFile('darby.txt', generateMarkdown(data), (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
 })
-
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README
