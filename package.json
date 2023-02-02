@@ -1,22 +1,29 @@
 {
   "name": "readmegenerator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Creating a readme generator",
+  "main": "index2.js",
   "scripts": {
+    "start": "node index2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darbyjenks/ReadMeGenerator.git"
   },
-  "author": "",
+  "keywords": [
+    "readme",
+    "node",
+    "generator",
+    "javascript"
+  ],
+  "author": "Darby Johnson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/darbyjenks/ReadMeGenerator/issues"
   },
   "homepage": "https://github.com/darbyjenks/ReadMeGenerator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^6.5.2"
   }
 }
