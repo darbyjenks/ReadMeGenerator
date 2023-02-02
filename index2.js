@@ -20,8 +20,13 @@ inquirer
 },
 {
     type:'input',
+    message:'What is your project"s usage information?',
+    name: 'usage',
+},
+{
+    type:'input',
     message:'What are your project installation instructions?',
-    name: 'installationInstructions',
+    name: 'installation',
 },
 {
     type:'input',
