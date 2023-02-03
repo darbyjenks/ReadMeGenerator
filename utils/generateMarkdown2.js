@@ -1,7 +1,11 @@
 // Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
+    if (license !== 'None') {
+        return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+      } else {
+      return '';
+      };
   }
   
   // Create a function that returns the license link
@@ -23,20 +27,25 @@ function renderLicenseBadge(license) {
     // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
     // WHEN I click on the links in the Table of Contents
     // THEN I am taken to the corresponding section of the README
-    return `# ${data.title} ${badge}
-    \n # Description
+    return `# ${data.title} <img src=https://img.shields.io/badge/license-${data.license}-blue.svg>
+    \n ## Description
     \n  ${data.description}
-    \n # Installation
+    \n ## Table Of Contents
+    \n - [Installation](#installation)
+    \n - [Usage](#usage)
+    \n - [Credits](#credits)
+    \n - [License](#license)
+    \n ## Installation
     \n  ${data.installation}
-    \n # Usage
+    \n ## Usage
     \n  ${data.usage}
-    \n # Contributing
-    \n  ${data.contributionGuidelines}
-    \n # Tests
-    \n  ${data.testInstructions}
-    \n # License
-    \n  ${license}
-    \n # Questions
+    \n ## Contributing
+    \n  ${data.contributing}
+    \n ## Tests
+    \n  ${data.tests}
+    \n ## License
+    \n  ${renderLicenseBadge(data.license)}
+    \n ## Questions
     \n  ${data.gitHub}
     \n  If you have additional questions please feel free to reach me by email: ${data.email}
   `;
