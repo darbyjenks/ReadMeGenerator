@@ -60,7 +60,7 @@ inquirer
 ])
 .then(data => {
     console.log(data);
-    fs.writeFile('darby.txt', generateMarkdown(data), (err) =>
+    fs.writeFile('darby.md', generateMarkdown(data), (err) =>
   err ? console.error(err) : console.log('Success!')
 );
 })
