@@ -30,69 +30,96 @@ function renderLicenseBadge(license) {
   }
   
   // Create a function to generate markdown for README
-  function generateMarkdown(data) {
+  function generateMarkdown(data){
 
-    // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-    // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-    // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-    // WHEN I click on the links in the Table of Contents
-    // THEN I am taken to the corresponding section of the README
-    return `# ${data.title} 
+  let tableOfContents = '## Table Of Contents';
+
+  if(data.installation !== ''){
+    tableOfContents += `
+    \n * [Installation](#installation)
+    `
+  };
+  if(data.usage !== ''){
+    tableOfContents += `
+    \n * [Usage](#usage)
+    `
+  };
+  if(data.contributing !== ''){
+    tableOfContents += `
+    \n * [Credits](#credits)
+    `
+  };
+  if(data.tests !== ''){
+    tableOfContents += `
+    \n * [Tests](#tests)
+    `
+  };
+  if(data.email !== ''){
+    tableOfContents += `
+    \n * [Questions](#questions)
+    `
+  };
+
+  let topMarkdown = `# ${data.title}
     ${renderLicenseBadge(data.license)}
 
     \n ## Description
 
-     ${data.description}
+    ${data.description}
 
-    \n ## Table Of Contents
+  `;
 
-    \n - [Installation](#installation)
+  topMarkdown += tableOfContents;
 
-    \n - [Usage](#usage)
-  
-    \n - [Credits](#credits)
-
-    \n - [Tests](#tests)
-
-    \n - [Questions](#questions)
-
+  if(data.installation !== ''){
+    topMarkdown += 
+    `
     \n ## Installation
-
     To install necessary dependencies, run the following command:
+    ${data.installation}
 
-
-      ${data.installation}
-
-    
+    `
+  };
+  if(data.usage !== ''){
+    topMarkdown += 
+    `
     \n ## Usage
-
-    ${data.usage}
+    Instructions for use:
+      ${data.usage}
 
     ${renderLicenseSection(data.license)}
     ${renderLicenseLink(data.license)}
 
+    `
+  };
+  if(data.contributing !== ''){
+    topMarkdown += 
+    `
     \n ## Credits
-    
     \n [Contributor Covenant](https://www.contributor-covenant.org/)
-    
     ${data.contributing}
 
-     \n ## Tests
+    `
+  };
+  if(data.tests !== ''){
+    topMarkdown += 
+    `
+    \n ## Tests
+    To run tests, run the following command:
+    ${data.tests}
+    `
+  };
+  if(data.email !== ''){
+    topMarkdown += 
+    `
+    \n ## Questions
+    If you have any questions about the repo, open an issue or contact me directly at 
+    \n [${data.email}](${data.email}). 
+    You can find more of my work at 
+    \n [${data.github}](https://github.com/${data.github}/).
+    `
+  };
+  return topMarkdown; 
+}
 
-     To run tests, run the following command:
-
-
-     ${data.tests}
-     
-
-     \n ## Questions
-
-     If you have any questions about the repo, open an issue or contact me directly at \n [${data.email}](${
-        data.email
-      }). You can find more of my work at \n [${data.github}](https://github.com/${
-        data.github
-      }/).
-  `;
-  }
-  
   module.exports = generateMarkdown;
