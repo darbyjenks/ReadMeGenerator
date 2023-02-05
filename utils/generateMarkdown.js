@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
   // If there is no license, return an empty string
   function renderLicenseLink(license) {
     if(license !== 'None'){
-        `https://img.shields.io/badge/license-${license}-blue.svg`
+        `(https://img.shields.io/badge/license-${license}-blue.svg)`
     } else {
         return '';
     }
@@ -45,16 +45,17 @@ function renderLicenseBadge(license) {
 
     ## Table Of Contents
 
-    *[Installation](#installation)
+    **[Installation](#installation)
 
-    *[Usage](#usage)
-    ${renderLicenseLink(data.license)}
+    **[Usage](#usage)
+    \`\`\`
+    <a href="${renderLicenseLink(data.license)}">License</a>
+    \`\`\`
+    **[Credits](#credits)
 
-    *[Credits](#credits)
+    **[Tests](#tests)
 
-    *[Tests](#tests)
-
-    *[Questions](#questions)
+    **[Questions](#questions)
 
     ## Installation
 
@@ -70,7 +71,7 @@ function renderLicenseBadge(license) {
 
     ${renderLicenseSection(data.license)}
 
-    ## Contributing
+    ## Credits
     
     [Contributor Covenant](https://www.contributor-covenant.org/)
     
@@ -86,9 +87,9 @@ function renderLicenseBadge(license) {
 
      ## Questions
 
-     If you have any questions about the repo, open an issue or contact me directly at ${
+     If you have any questions about the repo, open an issue or contact me directly at <${
         data.email
-      }. You can find more of my work at [${data.github}](https://github.com/${
+      }>. You can find more of my work at [${data.github}](https://github.com/${
         data.github
       }/).
   `;

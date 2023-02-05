@@ -1,4 +1,4 @@
-# README Generator ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# README Generator  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
     ## Description
 
@@ -6,16 +6,17 @@
 
     ## Table Of Contents
 
-    - [Installation](#installation)
+    ** [Installation] (#installation)
 
-    - [Usage](#usage)
-    undefined
+    **[Usage](#usage)
+    ```
+    <a href="undefined">License</a>
+    ```
+    **[Credits](#credits)
 
-    - [Credits](#credits)
+    **[Tests](#tests)
 
-    - [Tests](#tests)
-
-    - [Questions](#questions)
+    **[Questions](#questions)
 
     ## Installation
 
@@ -33,7 +34,7 @@
     
     This project is licensed under the MIT license.
 
-    ## Contributing
+    ## Credits
     
     [Contributor Covenant](https://www.contributor-covenant.org/)
     
@@ -49,5 +50,5 @@
 
      ## Questions
 
-     If you have any questions about the repo, open an issue or contact me directly at darbyj1707@yahoo.com. You can find more of my work at [darbyjenks](https://github.com/darbyjenks/).
+     If you have any questions about the repo, open an issue or contact me directly at <darbyj1707@yahoo.com>. You can find more of my work at [darbyjenks](https://github.com/darbyjenks/).
   

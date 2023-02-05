@@ -1,9 +1,17 @@
 // GIVEN a command-line application that accepts user input
 const inquirer = require('inquirer');
+const path = require('path');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+
+// Function to write README file using the user input
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
+
+function init(){
 inquirer
 .prompt([
 // WHEN I enter my project title
@@ -58,9 +66,16 @@ inquirer
     name: 'email',
 },
 ])
-.then(data => {
-    console.log(data);
-    fs.writeFile('README.md', generateMarkdown(data), (err) =>
-  err ? console.error(err) : console.log('Success!')
-);
-})
+// .then(data => {
+//     console.log(data);
+//     fs.writeFile('README.md', generateMarkdown(data), (err) =>
+//   err ? console.error(err) : console.log('Success!')
+// );
+// })
+.then((data) => {
+    console.log('Generating README...');
+    writeToFile('README.md', generateMarkdown({ ...data }));
+  });
+}
+
+init();
