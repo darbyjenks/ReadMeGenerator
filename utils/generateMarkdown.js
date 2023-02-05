@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
   // If there is no license, return an empty string
   function renderLicenseLink(license) {
     if(license !== 'None'){
-        `\n (https://img.shields.io/badge/license-${license}-blue.svg)`
+       return `\n (https://img.shields.io/badge/license-${license}-blue.svg)`
     } else {
         return '';
     }
@@ -65,7 +65,7 @@ function renderLicenseBadge(license) {
 
     \n ## Description
 
-    ${data.description}
+    \n ${data.description}
 
   `;
 
@@ -75,7 +75,7 @@ function renderLicenseBadge(license) {
     topMarkdown += 
     `
     \n ## Installation
-    To install necessary dependencies, run the following command:
+    \n To install necessary dependencies, run the following command:
     ${data.installation}
 
     `
@@ -84,8 +84,8 @@ function renderLicenseBadge(license) {
     topMarkdown += 
     `
     \n ## Usage
-    Instructions for use:
-      ${data.usage}
+    \n Instructions for use:
+    \n  ${data.usage}
 
     ${renderLicenseSection(data.license)}
     ${renderLicenseLink(data.license)}
@@ -97,7 +97,7 @@ function renderLicenseBadge(license) {
     `
     \n ## Credits
     \n [Contributor Covenant](https://www.contributor-covenant.org/)
-    ${data.contributing}
+    \n ${data.contributing}
 
     `
   };
@@ -105,15 +105,15 @@ function renderLicenseBadge(license) {
     topMarkdown += 
     `
     \n ## Tests
-    To run tests, run the following command:
-    ${data.tests}
+    \n To run tests, run the following command:
+    \n ${data.tests}
     `
   };
   if(data.email !== ''){
     topMarkdown += 
     `
     \n ## Questions
-    If you have any questions about the repo, open an issue or contact me directly at 
+    \n If you have any questions about the repo, open an issue or contact me directly at 
     \n [Email](${data.email}). 
     You can find more of my work at 
     \n [github](https://github.com/${data.github}/).
