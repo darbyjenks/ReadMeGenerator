@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license !== 'None') {
-        return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+        return `\n ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
       } else {
       return '';
       };
@@ -12,20 +12,17 @@ function renderLicenseBadge(license) {
   // If there is no license, return an empty string
   function renderLicenseLink(license) {
     if(license !== 'None'){
-        `(https://img.shields.io/badge/license-${license}-blue.svg)`
+        `\n (https://img.shields.io/badge/license-${license}-blue.svg)`
     } else {
         return '';
     }
   }
-  // \`\`\`html
-  //   <a href="${renderLicenseLink(data.license)}">License</a>
-  //   \`\`\`
 
   // Create a function that returns the license section of README
   // If there is no license, return an empty string
   function renderLicenseSection(license) {
     if (license !== 'None') {
-        return `## License
+        return `\n ## License
     
     This project is licensed under the ${license} license.`;
       }
@@ -72,10 +69,11 @@ function renderLicenseBadge(license) {
     ${data.usage}
 
     ${renderLicenseSection(data.license)}
+    ${renderLicenseLink(data.license)}
 
     \n ## Credits
     
-    [Contributor Covenant](https://www.contributor-covenant.org/)
+    \n [Contributor Covenant](https://www.contributor-covenant.org/)
     
     ${data.contributing}
 

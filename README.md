@@ -1,5 +1,6 @@
 # README Generator 
-    ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+    
+ ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
     
  ## Description
@@ -38,14 +39,17 @@
 
     The questions will be prompted in the terminal. Just ensure that each answer is thoughtful and contains all necessary and relative information about the repository.
 
-    ## License
+    
+ ## License
     
     This project is licensed under the MIT license.
+    undefined
 
     
  ## Credits
     
-    [Contributor Covenant](https://www.contributor-covenant.org/)
+    
+ [Contributor Covenant](https://www.contributor-covenant.org/)
     
     If you'd like to reach out to add anything beneficial to this code please feel free to reach out to me directly.
 
@@ -61,5 +65,5 @@
      
  ## Questions
 
-     If you have any questions about the repo, open an issue or contact me directly at [darjohnson](darjohnson). You can find more of my work at [darbyjenks](https://github.com/darbyjenks/).
+     If you have any questions about the repo, open an issue or contact me directly at [darbyj1707@yahoo.com](darbyj1707@yahoo.com). You can find more of my work at [darbyjenks](https://github.com/darbyjenks/).
   
