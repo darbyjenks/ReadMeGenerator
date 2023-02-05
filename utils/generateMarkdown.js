@@ -45,17 +45,17 @@ function renderLicenseBadge(license) {
 
     ## Table Of Contents
 
-    **[Installation](#installation)
+    * [Installation](#installation)
 
-    **[Usage](#usage)
-    \`\`\`
+    * [Usage](#usage)
+    \`\`\`html
     <a href="${renderLicenseLink(data.license)}">License</a>
     \`\`\`
-    **[Credits](#credits)
+    * [Credits](#credits)
 
-    **[Tests](#tests)
+    * [Tests](#tests)
 
-    **[Questions](#questions)
+    * [Questions](#questions)
 
     ## Installation
 
