@@ -17,6 +17,9 @@ function renderLicenseBadge(license) {
         return '';
     }
   }
+  // \`\`\`html
+  //   <a href="${renderLicenseLink(data.license)}">License</a>
+  //   \`\`\`
 
   // Create a function that returns the license section of README
   // If there is no license, return an empty string
@@ -40,53 +43,51 @@ function renderLicenseBadge(license) {
     return `# ${data.title} 
     ${renderLicenseBadge(data.license)}
 
-    ## Description
+    \n ## Description
 
      ${data.description}
 
-    ## Table Of Contents
+    \n ## Table Of Contents
 
-    -   [Installation](#installation)
+    \n - [Installation](#installation)
 
-    -   [Usage](#usage)
-    \`\`\`html
-    <a href="${renderLicenseLink(data.license)}">License</a>
-    \`\`\`
-    - [Credits](#credits)
+    \n - [Usage](#usage)
+  
+    \n - [Credits](#credits)
 
-    - [Tests](#tests)
+    \n - [Tests](#tests)
 
-    - [Questions](#questions)
+    \n - [Questions](#questions)
 
-    ## Installation
+    \n ## Installation
 
     To install necessary dependencies, run the following command:
 
-    \`\`\`
+
       ${data.installation}
-    \`\`\`
+
     
-    ## Usage
+    \n ## Usage
 
     ${data.usage}
 
     ${renderLicenseSection(data.license)}
 
-    ## Credits
+    \n ## Credits
     
     [Contributor Covenant](https://www.contributor-covenant.org/)
     
     ${data.contributing}
 
-     ## Tests
+     \n ## Tests
 
      To run tests, run the following command:
 
-     \`\`\`
-     ${data.tests}
-     \`\`\`
 
-     ## Questions
+     ${data.tests}
+     
+
+     \n ## Questions
 
      If you have any questions about the repo, open an issue or contact me directly at [${data.email}](${
         data.email
