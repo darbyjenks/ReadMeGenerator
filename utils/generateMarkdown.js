@@ -114,7 +114,7 @@ function renderLicenseBadge(license) {
     \n ## Questions
     \n If you have any questions about the repo, open an issue or contact me directly at 
     \n [Email](${data.email}). 
-    You can find more of my work at 
+    \n You can find more of my work at 
     \n [github](https://github.com/${data.github}/).
     `
   };
