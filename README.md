@@ -1,4 +1,4 @@
-# EADME Generator
+# README Generator
     
  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -49,8 +49,8 @@
  ## Questions
     If you have any questions about the repo, open an issue or contact me directly at 
     
- [darbyj1707@yahoo.com](darbyj1707@yahoo.com). 
+ [Email](darbyj1707@yahoo.com). 
     You can find more of my work at 
     
- [darbyjenks](https://github.com/darbyjenks/).
+ [github](https://github.com/darbyjenks/).
     
