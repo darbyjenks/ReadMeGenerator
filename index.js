@@ -1,73 +1,66 @@
-// TODO: Include packages needed for this application
+// GIVEN a command-line application that accepts user input
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown')
-// TODO: Create an array of questions for user input
-const questions = [
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the name of your app?'
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: 'Description of the app: '
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'Installation instructions: '
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'How to use the app: '
-    },
-    {
-        type: 'input',
-        name: 'contribution',
-        message: 'How to make contributions: '
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'What are the test instructions? '
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your github user name?'
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address?'
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'What is the license for this project?', 
-        choices: [
-            'MIT',
-            'Apache',
-            'GPL'
-        ]
-    }
-];
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-   return fs.writeFileSync(path.join(__dirname, fileName), data);
-}
-
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions).then(function(answers){
-        writeToFile('README.md', generateMarkdown(answers));
-    })
-}
-
-// Function call to initialize app
-init();
+// WHEN I am prompted for information about my application repository
+// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+inquirer
+.prompt([
+// WHEN I enter my project title
+{
+    type:'input',
+    message:'What is your project title?',
+    name: 'title',
+},
+// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+{
+    type:'input',
+    message:'What is your project description?',
+    name: 'description',
+},
+{
+    type:'input',
+    message:'What are your project installation instructions?',
+    name: 'installation',
+},
+{
+    type:'input',
+    message:'What is your project usage information?',
+    name: 'usage',
+},
+{
+    type:'input',
+    message:'What are your project contribution guidelines?',
+    name: 'contributing',
+},
+{
+    type:'input',
+    message:'What are your project test instructions?',
+    name: 'tests',
+},
+// WHEN I choose a license for my application from a list of options
+{
+    type: 'list',
+    message: 'What kind of license should your project have?',
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+    name: 'license',
+},
+// WHEN I enter my GitHub username
+{
+    type:'input',
+    message: 'What is your GitHub username?',
+    name: 'github',
+},
+// WHEN I enter my email address
+{
+    type:'input',
+    message: 'What is your email address?',
+    name: 'email',
+},
+])
+.then(data => {
+    console.log(data);
+    fs.writeFile('README.md', generateMarkdown(data), (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
+})
