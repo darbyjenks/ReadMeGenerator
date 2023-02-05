@@ -59,11 +59,13 @@
      To run tests, run the following command:
 
 
-     N/A
+     
      
 
      
  ## Questions
 
-     If you have any questions about the repo, open an issue or contact me directly at  [darbyj1707@yahoo.com](darbyj1707@yahoo.com). You can find more of my work at  [darbyjenks](https://github.com/darbyjenks/).
+     If you have any questions about the repo, open an issue or contact me directly at 
+ [darbyj1707@yahoo.com](darbyj1707@yahoo.com). You can find more of my work at 
+ [darbyjenks](https://github.com/darbyjenks/).
   
