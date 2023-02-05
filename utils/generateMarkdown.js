@@ -45,16 +45,16 @@ function renderLicenseBadge(license) {
 
     ## Table Of Contents
 
-    - [Installation](#installation)
+    *[Installation](#installation)
 
-    - [Usage](#usage)
+    *[Usage](#usage)
     ${renderLicenseLink(data.license)}
 
-    - [Credits](#credits)
+    *[Credits](#credits)
 
-    - [Tests](#tests)
+    *[Tests](#tests)
 
-    - [Questions](#questions)
+    *[Questions](#questions)
 
     ## Installation
 
