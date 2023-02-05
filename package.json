@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/darbyjenks/ReadMeGenerator#readme",
   "dependencies": {
+    "axios": "^1.3.2",
+    "ds-store": "^0.1.6",
     "inquirer": "^6.5.2"
   }
 }

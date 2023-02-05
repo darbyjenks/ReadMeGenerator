@@ -1,6 +1,7 @@
 // GIVEN a command-line application that accepts user input
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown')
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions

@@ -17,7 +17,7 @@ function renderLicenseBadge(license) {
         return '';
     }
   }
-  
+
   // Create a function that returns the license section of README
   // If there is no license, return an empty string
   function renderLicenseSection(license) {
@@ -37,7 +37,8 @@ function renderLicenseBadge(license) {
     // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
     // WHEN I click on the links in the Table of Contents
     // THEN I am taken to the corresponding section of the README
-    return `# ${data.title} ${renderLicenseBadge(data.license)}
+    return `# ${data.title} 
+    ${renderLicenseBadge(data.license)}
 
     ## Description
 
@@ -45,17 +46,17 @@ function renderLicenseBadge(license) {
 
     ## Table Of Contents
 
-    * [Installation](#installation)
+    -   Installation](#installation)
 
-    * [Usage](#usage)
+    -   [Usage](#usage)
     \`\`\`html
     <a href="${renderLicenseLink(data.license)}">License</a>
     \`\`\`
-    * [Credits](#credits)
+    - [Credits](#credits)
 
-    * [Tests](#tests)
+    - [Tests](#tests)
 
-    * [Questions](#questions)
+    - [Questions](#questions)
 
     ## Installation
 
